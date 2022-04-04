@@ -1,0 +1,24 @@
+server:
+  port: 8090
+
+
+  #设置MySQL数据源信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sk?serverTimezone=GMT%2B8&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: Seeyon123
+    #设置redis信息
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+
+
+#设置mybatis的mapper文件
+#设置自动驼峰转换
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
